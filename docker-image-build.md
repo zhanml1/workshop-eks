@@ -7,13 +7,13 @@
 ### 1. Provision a EC2 instance in AWS ZHY Region.
 
 ### 2. download and install tomcat
-`
+```
 curl -O https://mirror.bit.edu.cn/apache/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz
 
 tar -xzf apache-tomcat-9.0.35.tar.gz
 
 mv apache-tomcat-9.0.35 tomcat
-`
+```
 ### 3. dockerfile
 `
 from centos:8
