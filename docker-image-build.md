@@ -32,7 +32,7 @@ docker run -d -p 8080:8080 --name mytomcat-container mytomcat
 ```
 ### 5. upload docker image to ECR
 
-####初始化Elastic Container Registry
+#### 初始化Elastic Container Registry
 - 点击左上角“Services”，搜索“Elastic Container Registry”
 - 进入Elastic Container Registry
 - 点击右侧“get started”
