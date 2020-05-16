@@ -9,3 +9,8 @@
 7. 点击右侧“Start Session”
 8. 选中“TestInstance”，点击“Start Session”
 9. 进入了EC2 instance。
+10. 执行下列命令
+```
+export PS1="\n[\u@\h \W]$ "
+cd /home/ssm-user
+```
