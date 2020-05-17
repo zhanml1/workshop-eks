@@ -25,7 +25,7 @@ eksctl create nodegroup \
     --node-volume-size 5 \
     --nodes 1 \
     --nodes-min 1 \
-    --nodes-max 5 \       
+    --nodes-max 5 \
     --node-private-networking \
     --alb-ingress-access \
     --managed \
