@@ -5,6 +5,9 @@
 ## install eksctl
 ```
 curl -OL "https://github.com/weaveworks/eksctl/releases/download/0.15.0-rc.2/eksctl_$(uname -s)_amd64.tar.gz"
+
+curl -OL "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz"
+
 tar -zxf eksctl_$(uname -s)_amd64.tar.gz
 mv ./eksctl /usr/bin
 
