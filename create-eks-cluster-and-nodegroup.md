@@ -20,7 +20,7 @@ eksctl create nodegroup \
     --cluster $CLUSTER_NAME \
     --region $AWS_REGION \
     --version 1.15 \
-    --name $CLUSTER_NAME-nodegroup
+    --name $CLUSTER_NAME-nodegroup \
     --node-type t3.small \
     --node-volume-size 5 \
     --nodes 1 \
