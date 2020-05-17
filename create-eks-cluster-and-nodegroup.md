@@ -17,10 +17,10 @@ eksctl create cluster \
     --vpc-private-subnets subnet-0f0bfa53ee8740cd9,subnet-0e6ed9d372302bbca,subnet-0c6f764aa2c9f610e
 
 eksctl create nodegroup \
-    --cluster eks-mark \
-    --region ap-northeast-1 \
+    --cluster $CLUSTER_NAME \
+    --region $AWS_REGION \
     --version 1.15 \
-    --name ekd-mark-nodegroup
+    --name $CLUSTER_NAME-nodegroup
     --node-type t3.small \
     --node-volume-size 5 \
     --nodes 1 \
