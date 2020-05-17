@@ -1,4 +1,4 @@
-# Install Toold For EKS
+# Install Tools For EKS
 
 ## Return to [README.md](README.md)
 
