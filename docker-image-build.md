@@ -8,7 +8,6 @@
 
 ### 1. install docker
 ```
-sudo su
 yum install -y docker
 systemctl start docker
 ```
