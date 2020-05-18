@@ -9,7 +9,7 @@ eksctl utils associate-iam-oidc-provider --cluster=${CLUSTER_NAME} --approve --r
 
 ## 2. Create IAM Policy 
 
-### make iam-policy-v1.1.5.json
+### create iam-policy-v1.1.5.json
 ```
 cat <<EOF > iam-policy-v1.1.5.json
 {
@@ -157,7 +157,7 @@ eksctl create iamserviceaccount \
 
 ## 4.create RBAC
 
-### create rbac-role-v1.1.5.yaml file
+### create rbac-role-v1.1.5.yaml
 ```
 cat <<EOF > rbac-role-v1.1.5.yaml
 ---
@@ -233,7 +233,16 @@ kubectl apply -f rbac-role-v1.1.5.yaml
 
 ## 5. create ALB APP
 
-### create alb-ingress-controller-v1.1.5.yaml file
+### get vpc-id
+```
+eksctl get cluster --name eks-test
+```
+
+### create alb-ingress-controller-v1.1.5.yaml
+modify              
+  - --cluster-name=xxx
+  - --aws-vpc-id=xxx
+  - --aws-region=xxx
 ```
 cat <<EOF > alb-ingress-controller-v1.1.5.yaml
 # Application Load Balancer (ALB) Ingress Controller Deployment Manifest.
@@ -317,7 +326,7 @@ kubectl apply -f alb-ingress-controller-v1.1.5.yaml
 
 ## 6. create ingress
 
-### create alb-ingress.yml file
+### create alb-ingress.yml
 ```
 cat <<EOF > alb-ingress.yml
 apiVersion: extensions/v1beta1
