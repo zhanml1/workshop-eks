@@ -16,4 +16,4 @@
 
 ## 8. [Create service account for pod](create-service-account.md)
 
-
+## 9. [Scale pod](scale-pod.md)
