@@ -359,4 +359,12 @@ kubectl apply -f alb-ingress.yml
 ```
 kubectl get ingress
 ```
-
+output
+```
+AME          HOSTS   ADDRESS                                                                       PORTS   AGE
+alb-ingress   *       39445c63-default-albingres-d740-1150759180.ap-southeast-1.elb.amazonaws.com   80      13m
+```
+browser
+```
+http://39445c63-default-albingres-d740-1150759180.ap-southeast-1.elb.amazonaws.com
+```
