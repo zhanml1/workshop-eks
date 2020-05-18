@@ -36,6 +36,7 @@ docker images
 ### 4. docker run
 ```
 docker run -d -p 8080:8080 --name mytomcat-container mytomcat
+curl http://localhost:8080
 ```
 ### 5. upload docker image to ECR
 
