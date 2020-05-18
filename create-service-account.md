@@ -38,7 +38,7 @@ kubectl edit deployment myapp-deployment
 # add "serviceAccountName: s3-full-access" below "terminationGracePeriodSeconds: 30"
 ```
 
-## 4. reenter pod
+## 4. re-enter pod
 ```
 kubectl get pod
 kubectl exec -it <podname> /bin/bash
