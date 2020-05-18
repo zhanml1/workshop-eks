@@ -9,3 +9,5 @@
 ## 4. [Docker Image Build](docker-image-build.md)
 
 ## 5. [Create APP/Deployment/Service](create-app.md)
+
+## 6. [Scale node group](scale-node-group.md)
