@@ -15,4 +15,5 @@
 export PS1="\n[\u@\h \W]$ "
 cd /home/ssm-user
 sudo su
+yum install -y jq
 ```
