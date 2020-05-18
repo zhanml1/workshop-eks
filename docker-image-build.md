@@ -49,6 +49,7 @@ curl http://localhost:8080
 
 #### upload docker image
 ```
+# update ECR_URI
 export ECR_URL=xxxxxx.dkr.ecr.ap-southeast-1.amazonaws.com/mytomcat
 $(aws ecr get-login --no-include-email --region ap-southeast-1)
 docker tag mytomcat:latest $ECR_URL:1
