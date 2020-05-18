@@ -14,4 +14,6 @@
 
 ## 7. [Create ALB Ingress Controller](create-alb.md)
 
+## 8. [Create service account for pod](create-service-account.md)
+
 
