@@ -5,6 +5,8 @@
 ## yum install
 ```
 yum install -y jq
+# http load test tool
+yum -y install httpd-tools
 ```
 
 ## install eksctl
