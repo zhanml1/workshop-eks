@@ -14,6 +14,8 @@ eksctl create iamserviceaccount --name s3-full-access --namespace default \
 S3_BUCKET=ekstest20200518
 if [ $(aws s3 ls | grep $S3_BUCKET | wc -l) -eq 0 ]; then
     aws s3 mb s3://$S3_BUCKET --region $AWS_REGION
+    echo "test" > test.txt
+    aws s3 cp test.txt s3://$S3_BUCKET/
 else
     echo "S3 bucket $S3_BUCKET existed, skip creation"
 fi
@@ -47,5 +49,5 @@ aws s3 ls s3://<S3_BUCKET>
 ```
 output
 ```
-no error
+test.txt
 ```
