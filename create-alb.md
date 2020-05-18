@@ -324,7 +324,7 @@ EOF
 kubectl apply -f alb-ingress-controller-v1.1.5.yaml
 ```
 
-## 6. create ingress
+## 6. create ingress for service
 
 ### create alb-ingress.yml
 ```
@@ -362,9 +362,9 @@ kubectl get ingress
 output
 ```
 AME          HOSTS   ADDRESS                                                                       PORTS   AGE
-alb-ingress   *       39445c63-default-albingres-d740-1150759180.ap-southeast-1.elb.amazonaws.com   80      13m
+alb-ingress   *       xxx.ap-southeast-1.elb.amazonaws.com   80      13m
 ```
 browser
 ```
-http://39445c63-default-albingres-d740-1150759180.ap-southeast-1.elb.amazonaws.com
+http://xxx.ap-southeast-1.elb.amazonaws.com
 ```
