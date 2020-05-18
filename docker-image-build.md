@@ -2,22 +2,20 @@
 
 ## Return to [README.md](README.md)
 
-
-## 在EC2 instance中执行下列操作：
-将生成JAVA Tomcat的Docker Image
+Build Docker Image including JAVA, Tomcat and AWSCLI
 
 ### 1. install docker
 ```
 yum install -y docker
 systemctl start docker
 ```
-### 1. download and install tomcat
+### 2. download and install tomcat
 ```
 curl -O http://ftp.meisei-u.ac.jp/mirror/apache/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz
 tar -xzf apache-tomcat-9.0.35.tar.gz
 mv apache-tomcat-9.0.35 tomcat
 ```
-### 2. make dockerfile
+### 3. make dockerfile
 ```
 cat <<EOF > dockerfile
 from centos:8
@@ -30,19 +28,19 @@ EXPOSE 8080
 ENTRYPOINT ["/home/tomcat/bin/catalina.sh","run"]
 EOF
 ```
-### 3. docker build
+### 4. docker build
 ```
 docker build -t mytomcat .
 docker images
 ```
-### 4. docker run
+### 5. docker run
 ```
 docker run -d -p 8080:8080 --name mytomcat-container mytomcat
 curl http://localhost:8080
 ```
-### 5. upload docker image to ECR
+### 6. upload docker image to ECR
 
-#### 初始化Elastic Container Registry
+#### Initiate Elastic Container Registry
 - 点击左上角“Services”，搜索“Elastic Container Registry”
 - 进入Elastic Container Registry
 - 点击右侧“get started”
