@@ -33,6 +33,12 @@ EOF
 docker build -t mytomcat .
 docker images
 ```
+output
+```
+EPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+mytomcat            latest              65916bfdf6b7        7 seconds ago       550MB
+centos              8                   470671670cac        4 months ago        237MB
+```
 ### 5. docker run
 ```
 docker run -d -p 8080:8080 --name mytomcat-container mytomcat
