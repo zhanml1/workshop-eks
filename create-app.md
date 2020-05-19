@@ -24,7 +24,7 @@ spec:
         app: myapp
     spec:
       containers:
-      - name: mark-webdemo
+      - name: mytomcat
         image: xxxxxx.dkr.ecr.ap-southeast-1.amazonaws.com/mytomcat:1
         ports:
         - containerPort: 8080
