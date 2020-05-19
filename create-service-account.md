@@ -10,6 +10,7 @@ eksctl create iamserviceaccount --name s3-full-access --namespace default \
     --approve --override-existing-serviceaccounts --region ${AWS_REGION}
 ```
 ## 2. create S3 bucket
+modify S3_BUCKET with unique name
 ```
 S3_BUCKET=ekstest20200518
 if [ $(aws s3 ls | grep $S3_BUCKET | wc -l) -eq 0 ]; then
@@ -24,9 +25,10 @@ fi
 ## 2. enter pod
 ```
 kubectl get pod
-kubectl exec -it <podname> /bin/bash
+#kubectl exec -it <podname> /bin/bash
+kubectl exec -it $(kubectl get pod -o json | jq -r '.items[0].metadata.name') /bin/bash
 
-aws s3 ls s3://<S3_BUCKET>
+aws s3 ls s3://<S3_BUCKET>/
 ```
 output
 ```
@@ -43,7 +45,7 @@ kubectl edit deployment myapp-deployment
 ## 4. re-enter pod
 ```
 kubectl get pod
-kubectl exec -it <podname> /bin/bash
+kubectl exec -it $(kubectl get pod -o json | jq -r '.items[0].metadata.name') /bin/bash
 
 aws s3 ls s3://<S3_BUCKET>
 ```
