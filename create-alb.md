@@ -235,7 +235,7 @@ kubectl apply -f rbac-role-v1.1.5.yaml
 
 ### get vpc-id
 ```
-eksctl get cluster --name eks-test
+eksctl get cluster --name eks-test -o json | jq -r '.[].ResourcesVpcConfig.VpcId'
 ```
 
 ### create alb-ingress-controller-v1.1.5.yaml
