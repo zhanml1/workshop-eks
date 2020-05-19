@@ -4,11 +4,24 @@
 
 ## 1. manually scale pod
 ```
-kubectl scale --replicas=5 deployment/myapp-deployment
+kubectl scale --replicas=10 deployment/myapp-deployment
 kubectl get pod -o wide
 ```
 Check EC2>LOAD BALANCING>Target Group>Targets
 
+## 2. check pod status
+There are 4 pod in Pending status.
+```
+kubectl get pod
+kubectl get pod -o json | jq -r '.items[] | select(.status.phase=="Pending")' | jq -r '.metadata.name'
+kubectl get events
+```
+## 3. scale node group
+```
+NODE_GROUP=$(eksctl get nodegroup --cluster ${CLUSTER_NAME} --region=${AWS_REGION} -o json | jq -r '.[].Name')
+eksctl scale nodegroup --cluster=${CLUSTER_NAME} --nodes=2 --name=${NODE_GROUP} --region=${AWS_REGION}
+kubectl get node
+```
 ## 2. create HPA
 ```
 curl -sL https://api.github.com/repos/kubernetes-sigs/metrics-server/tarball/v0.3.6 -o metrics-server-v0.3.6.tar.gz
