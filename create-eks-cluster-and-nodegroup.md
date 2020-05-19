@@ -31,9 +31,8 @@ eksctl create cluster \
 --managed \
 --asg-access \
 --full-ecr-access
-
-
 ```
+wait about 10-15 minutes
 ## 2. check node group status
 ```
 kubectl get node
