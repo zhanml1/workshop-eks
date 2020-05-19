@@ -43,7 +43,7 @@ kubectl scale --replicas=1 deployment/myapp-deployment
 
 ## 7. set limit for pod
 ```
-kubectl set resources deployment myapp-deployment --limits=cpu=200m,memory=128Mi
+kubectl set resources deployment myapp-deployment --limits=cpu=200m,memory=256Mi
 ```
 
 ## 8. set autoscale
