@@ -7,13 +7,16 @@ update image like xxxxxx.dkr.ecr.ap-southeast-1.amazonaws.com/mytomcat:1
 ```
 cat <<EOF > myapp.yml
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp-deployment
   labels:
     app: myapp
 spec:
+  selector:
+    matchLabels:
+      app: myapp
   replicas: 1
   template:
     metadata:
@@ -39,6 +42,7 @@ spec:
     port: 8080
     targetPort: 8080
 EOF
+
 ```
 
 ## 2. build deploy/service
@@ -53,4 +57,3 @@ kubectl get pod
 kubectl get service -o wide
 
 ```
-
