@@ -3,6 +3,7 @@
 ## Return to [README.md](README.md)
 
 ## 1. make app myapp.yml
+update image like xxxxxx.dkr.ecr.ap-southeast-1.amazonaws.com/mytomcat:1
 ```
 cat <<EOF > myapp.yml
 ---
