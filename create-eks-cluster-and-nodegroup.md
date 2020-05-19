@@ -3,11 +3,11 @@
 ## Return to [README.md](README.md)
 
 ## 1. get subnet-id
-点击左上角Services，搜索VPC。
-点击VPC进入。
-点击左侧Subnets。
-查看Public Subnet x和Private Subnet x的Subnet ID。
-用该subnet id更新下面的指令。
+- 点击左上角Services，搜索VPC。
+- 点击VPC进入。
+- 点击左侧Subnets。
+- 查看Public Subnet x和Private Subnet x的Subnet ID。
+- 用该subnet id更新下面的指令。
 
 ## 1. Create EKS Cluster and Nodegroup
 ```
