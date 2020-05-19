@@ -326,6 +326,15 @@ kubectl apply -f alb-ingress-controller-v1.1.5.yaml
 
 ## 6. create ingress for service
 
+### check subnet tags
+- 点击左上角Services，搜索VPC。
+- 点击VPC进入。
+- 点击左侧Subnets。
+- 点击Public Subnet x。
+- 查看下面窗口的Tags，是否包含kubernetes.io/role/elb
+- 如果没有，点击add/edit tags.
+- 然后点击create tags，输入key = kubernetes.io/role/elb ， Value = 1
+
 ### create alb-ingress.yml
 ```
 cat <<EOF > alb-ingress.yml
