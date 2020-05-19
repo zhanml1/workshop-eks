@@ -53,7 +53,7 @@ kubectl apply -f myapp.yml
 ## 3. check deployment and service
 ```
 kubectl get deploy
-kubectl get pod
+kubectl get pod -o wide
 kubectl get service -o wide
 
 ```
