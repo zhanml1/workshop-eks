@@ -50,7 +50,7 @@ curl -I http://localhost:8080
 - 点击左上角“Services”，搜索“Elastic Container Registry”
 - 进入Elastic Container Registry
 - 点击右侧“get started”
-- 在Repository name处，输入mytomcat
+- 在Repository name处，输入mytomcat，然后点击“Create repository”
 - 记录URI，如xxxxxx.dkr.ecr.ap-southeast-1.amazonaws.com/mytomcat
 
 #### upload docker image
