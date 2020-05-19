@@ -6,14 +6,12 @@
 
 ## 3. [Create EKS cluster and nodegroup](create-eks-cluster-and-nodegroup.md)
 
-## 4. [Scale node group](scale-node-group.md)
+## 4. [Docker Image Build](docker-image-build.md)
 
-## 5. [Docker Image Build](docker-image-build.md)
+## 5. [Create APP/Deployment/Service](create-app.md)
 
-## 6. [Create APP/Deployment/Service](create-app.md)
+## 6. [Create ALB Ingress Controller](create-alb.md)
 
-## 7. [Create ALB Ingress Controller](create-alb.md)
+## 7. [Create service account for pod](create-service-account.md)
 
-## 8. [Create service account for pod](create-service-account.md)
-
-## 9. [Scale pod](scale-pod.md)
+## 8. [Scale pod with HPA and CA](scale-pod.md)
