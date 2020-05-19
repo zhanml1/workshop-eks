@@ -75,6 +75,9 @@ kubectl -n kube-system annotate deployment.apps/cluster-autoscaler cluster-autos
 ```
 
 ### edit the Cluster Autoscaler deployment 
+```
+kubectl -n kube-system edit deployment.apps/cluster-autoscaler
+```
 - replace <YOUR CLUSTER NAME> with your cluster's name
 - add --balance-similar-node-groups
 - add --skip-nodes-with-system-pods=false
@@ -97,4 +100,9 @@ spec:
 ### update image
 ```
 kubectl -n kube-system set image deployment.apps/cluster-autoscaler cluster-autoscaler=asia.gcr.io/k8s-artifacts-prod/autoscaling/cluster-autoscaler:v1.16.5
+```
+
+### cluster autoscaler logs
+```
+kubectl -n kube-system logs -f deployment.apps/cluster-autoscaler
 ```
