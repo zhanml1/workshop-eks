@@ -41,7 +41,7 @@ spec:
 EOF
 ```
 
-## 2. build pod/service
+## 2. build deploy/service
 ```
 kubectl apply -f myapp.yml
 ```
