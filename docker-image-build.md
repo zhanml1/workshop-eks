@@ -42,7 +42,7 @@ centos              8                   470671670cac        4 months ago        
 ### 5. docker run
 ```
 docker run -d -p 8080:8080 --name mytomcat-container mytomcat
-curl http://localhost:8080
+curl -I http://localhost:8080
 ```
 ### 6. upload docker image to ECR
 
