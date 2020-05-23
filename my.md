@@ -2,7 +2,7 @@
 
 ## 1. ENV
 ```
-export ECR_URI=773710653318.dkr.ecr.us-east-1.amazonaws.com/webdemo
+export ECR_URI=xxxxxx.dkr.ecr.us-east-1.amazonaws.com/webdemo
 export AWS_REGION=us-east-1
 ```
 ## 2. docker build
