@@ -78,7 +78,7 @@ kubectl set image deploy webdemo-deployment webdemo=xxxxxx.dkr.ecr.us-east-1.ama
 ## 7. [Create ALB Ingress Controller](create-alb.md)
 
 ## 8. EKS Security Group
-Node Group Security Group
+### Node Group Security Group
 ```
 aws eks describe-cluster --name $CLUSTER_NAME --region $AWS_REGION --query cluster.resourcesVpcConfig.clusterSecurityGroupId
 ```
@@ -91,7 +91,7 @@ All TCP	TCP	0 - 65535	sg-04b9e36e8065ccf4d (874fd01e-default-albingres-d740)	-
 All traffic	All	All	sg-017c49b27e7557992 (eks-cluster-sg-eks-mark-553914355)	-
 All traffic	All	All	sg-0c797c28280410c7d (eksctl-eks-mark-cluster-ClusterSharedNodeSecurityGroup-1GYLHLRT0MUSE)	Allow unmanaged nodes to communicate with control plane (all ports)
 ```
-Cluster Security Group includes below and above
+### Cluster Security Group includes below and above
 ```
 aws eks describe-cluster --name $CLUSTER_NAME --region $AWS_REGION --query cluster.resourcesVpcConfig.securityGroupIds
 ```
@@ -101,7 +101,7 @@ sg-0440997b4c0232f5d	eksctl-eks-mark-cluster-ControlPlaneSecurityGroup-1OI1V9VE2
 ingress
 null
 ```
-ALB Security Group
+### ALB Security Group
 ```
 sg-04b9e36e8065ccf4d	874fd01e-default-albingres-d740
 ```
