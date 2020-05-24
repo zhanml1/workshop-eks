@@ -58,6 +58,53 @@ spec:
     targetPort: 80
 EOF
 ```
+### add liveness prove
+```
+cat <<EOF > webdemo.yml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webdemo-deployment
+  labels:
+    app: webdemo
+spec:
+  selector:
+    matchLabels:
+      app: webdemo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: webdemo
+    spec:
+      containers:
+      - name: webdemo
+        image: xxxxxx.dkr.ecr.ap-southeast-1.amazonaws.com/mytomcat:1
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "webdemo-service"
+spec:
+  selector:
+    app: webdemo
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+EOF
+```
+
 ## 4. build deploy/service
 ```
 kubectl apply -f webdemo.yml
